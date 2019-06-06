@@ -1,7 +1,8 @@
 var canvas, ctx;
 var pxs = {};
 var size = 1024;
-var point, start;
+var point;
+var start= [];
 var visit = [];
 // var field = require('.vfield.json');
 function coordToStr(r, c) {
@@ -16,7 +17,7 @@ function tick() {
   // ctx.fillStyle = "#FF0000";
   while (visit.length > 0) {
     point = visit.pop()
-    console.log('STRING', coordToStr(point[0], point[1]));
+    // console.log('STRING', coordToStr(point[0], point[1]));
     pxs[coordToStr(point[0], point[1])] = 1;
     // ctx.fillRect(point[1], point[0], 1, 1);
     // console.log(point[0], point[1], field[point[0]][point[1]])
@@ -40,13 +41,13 @@ function tick() {
     } else {
       let val = pxs[key];
       a = 10.0/val;
-      console.log(val)
+      // console.log(val)
       let coords = strToCoord(key);
       coords[0] = parseInt(coords[0]);
       coords[1] = parseInt(coords[1]);
-      console.log('coords', coords, a);
+      // console.log('coords', coords, a);
       ctx.fillStyle = 'rgba(255, 100, 0, '+ a + ')';
-      console.log('rgba(255, 100, 0, ' + a + ')')
+      // console.log('rgba(255, 100, 0, ' + a + ')')
       ctx.fillRect(coords[1], coords[0], 1, 1);
     }
   }
@@ -58,14 +59,17 @@ window.onload = function() {
 
   for (var r = 0; r < size; r += 1) {
     if (field[1023][r].length != 0){
-      start = [1023, r]
+      start.push([1023, r])
       visit.push([1023,r])
       console.log(field[1023][r], visit)
     }
   }
   window.setInterval(tick, 100);
   window.setInterval(function() {
-    visit.push(start)
+      for (let s in start) {
+          visit.push(s)
+      }
+
   }, 5000);
-  console.log(visit);
-};
+  // console.log(visit);
+}
