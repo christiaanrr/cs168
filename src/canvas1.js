@@ -26,7 +26,7 @@ function setup() {
   for (var i = 0; i < 300; i++) {
     particles[i] = new Particle();
   }
-  background(255);
+  background(0, 0, 0, 0);
   console.log(field);
 }
 
