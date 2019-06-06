@@ -1,7 +1,3 @@
-// var c = document.getElementById('canvas1');
-// var ctx = c.getContext('2d');
-// ctx.draw();
-
 var inc = 0.1;
 var scl = 30;
 var cols, rows;
@@ -42,16 +38,8 @@ function draw() {
       flowfield[index] = v;
       xoff += inc;
       stroke(0, 50);
-      // push();
-      // translate(x * scl, y * scl);
-      // rotate(v.heading());
-      // strokeWeight(1);
-      // line(0, 0, scl, 0);
-      // pop();
     }
     yoff += inc;
-
-    // zoff += 0.0003;
   }
 
   for (var i = 0; i < particles.length; i++) {

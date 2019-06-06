@@ -1,17 +1,8 @@
-.img-main {
+#img-main {
     position: absolute;
-    background: url(../images/brain2.gif);
+    background: url("../images/brain2.gif");
     width: 1024px;
     height: 1024px;
-    z-index: 1;
-}
-
-.img-overlay {
-    position:absolute;
-    width: 1024px;
-    height: 1024px;
-    background:rgba(0,0,0,0);
-    z-index: 2;
 }
 
 #canvas1 {
@@ -19,20 +10,49 @@
     position: absolute;
     width: 1024px;
     height: 1024px;
-    z-index: 3;
 }
 
-.canvas2 {
-    position: absolute;
+html {
+    position: fixed;
     width: 1024px;
     height: 1024px;
-    z-index: 4;
 }
-
-.stack {
+#stack {
     position: relative;
+    width: 1024px;
+    height: 1024px;
 }
 
 body {
     margin: 0;
+    overflow: hidden;
+    width: 1024px;
+    height: 1024px;
   }
+
+#reveal-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 1024px;
+    height: 1024px;
+    background: rgba(0,0,0, 0.65);
+    z-index: 5;
+}
+
+.reveal {
+z-index: 6;
+position: absolute;
+top: 0;
+left: 0;
+width: 10rem;
+height: 10rem;
+right: 0;
+bottom: 0;
+background: url("../images/brain2.gif") 0% 0% no-repeat fixed;
+background-size: 1024px 1024px;
+border-radius: 50%;
+-webkit-mask-image: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0) 70%);
+}
