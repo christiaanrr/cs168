@@ -1,17 +1,37 @@
-.canvas1 {
+.img-main {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    background: url(../images/brain2.gif);
+    width: 1024px;
+    height: 1024px;
     z-index: 0;
+}
+
+.img-overlay {
+    position:absolute;
+    width: 1024px;
+    height: 1024px;
+    background:rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.canvas1 {
+    position:absolute;
+    width: 1024px;
+    height: 1024px;
+    z-index: 2;
 }
 
 .canvas2 {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+    width: 1024px;
+    height: 1024px;
+    z-index: 3;
 }
 
 .stack {
     position: relative;
 }
+
+body {
+    margin: 0;
+  }
