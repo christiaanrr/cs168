@@ -1,31 +1,31 @@
-.img-main {
+/* .img-main {
     position: absolute;
     background: url(../images/brain2.gif);
     width: 1024px;
     height: 1024px;
-    z-index: 0;
+    z-index: 1;
 }
 
 .img-overlay {
     position:absolute;
     width: 1024px;
     height: 1024px;
-    background:rgba(0,0,0,0.6);
-    z-index: 1;
+    background:rgba(0,0,0,0);
+    z-index: 2;
 }
 
 .canvas1 {
     position:absolute;
     width: 1024px;
     height: 1024px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .canvas2 {
     position: absolute;
     width: 1024px;
     height: 1024px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .stack {
@@ -34,4 +34,4 @@
 
 body {
     margin: 0;
-  }
+  } */
