@@ -23,7 +23,7 @@ function setup() {
       particles.push(new Particle(r, 1023));
     }
   }
-  background(0, 0, 0, 0);
+  // background(0, 0, 0, 0);
 }
 
 function draw() {
@@ -42,12 +42,12 @@ function draw() {
       let angle = atan2(dr, dc) * 180 / PI;
       let v = p5.Vector.fromAngle(angle);
       v.setMag(1);
-      stroke(0, 50);
+      // stroke('rgba(255,0,0,0.25)');
       // push();
-      // translate(point[1], point[0]);
+      // translate(pt[1], pt[0]);
       // rotate(v.heading());
       // strokeWeight(1);
-      // line(0, 0, 1, 0);
+      // line(0, 0, 10, 0);
       // pop();
       particles[p].follow(v);
       particles[p].update();
@@ -71,7 +71,7 @@ function draw() {
       }
   }
 
-  if (restart == 200) {
+  if (restart == 300) {
       console.log('restart');
       visit.push(...start);
       for (let k = 0; k < start.length; k++) {

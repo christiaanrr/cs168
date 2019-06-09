@@ -5,6 +5,8 @@ function Particle(x, y) {
   this.maxspeed = 0.1;
   this.h = 0;
 
+  this.prevPos = this.pos.copy();
+
   this.update = function() {
     this.vel.add(this.acc);
     this.vel.limit(this.maxspeed);
@@ -30,7 +32,13 @@ function Particle(x, y) {
     }
 
     strokeWeight(10);
-    point(this.pos.x, this.pos.y);
+    line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
+    this.updatePrev();
+  }
+
+  this.updatePrev = function() {
+    this.prevPos.x = this.pos.x;
+    this.prevPos.y = this.pos.y;
   }
 
   this.edges = function() {
